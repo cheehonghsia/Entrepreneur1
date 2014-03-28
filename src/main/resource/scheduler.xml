@@ -7,19 +7,14 @@
        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
 
-<!-- 	<bean name="job" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+<bean name="job" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
       <property name="targetObject" ref="competitionScheduler" />
       <property name="targetMethod" value="activateCompetition" />
-    </bean>
-
-	<bean name="job" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
-      <property name="targetObject" ref="competitionScheduler" />
-      <property name="targetMethod" value="endCompetition" />
     </bean>
     
 	<bean id="trigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
 		<property name="jobDetail" ref="job" />
-		This will fire at midnight 
+		<!-- This will fire at midnight --> 
 		<property name="cronExpression" value="0 0 0 * * ?" />
 	</bean>
 	
@@ -29,6 +24,6 @@
 				<ref bean="trigger" />
 			</list>
 		</property>
-	</bean> -->
+	</bean> 
 	
 </beans>
