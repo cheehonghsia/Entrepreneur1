@@ -1,0 +1,321 @@
+/******************************************************************
+Name: 
+Author:
+Description: 
+******************************************************************/
+
+/* Table of Content
+==================================================
+	#General
+	#Typography
+	#Navigation
+	#Forms
+	#Buttons
+	#Alerts
+	#Charts
+	
+	#Login
+	#Projects
+	
+	#Media Queries
+	
+/* General
+================================================== */
+
+body { 
+	-webkit-font-smoothing: antialiased; 
+}
+
+a {
+	color: #8fd1c5;
+	text-decoration: none;
+}
+
+a:hover, a:focus {
+	color: #a6d8cf;
+	text-decoration: none;
+	outline: none;
+	border-bottom: 1px #a6d8cf dotted;
+}
+
+.inline-block {
+	display: inline-block;
+}
+
+.heading {
+	padding-top: 30px;
+	padding-bottom: 40px;
+}
+
+.heading h1 {
+	margin-top: 10px;
+}
+
+.heading .btn-group {
+	padding-top: 10px;
+}
+
+/* Typography
+================================================== */
+
+@font-face {
+    font-family: 'montserratregular';
+    src: url('../fonts/montserrat-regular-webfont.eot');
+    src: url('../fonts/montserrat-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/montserrat-regular-webfont.woff') format('woff'),
+         url('../fonts/montserrat-regular-webfont.ttf') format('truetype'),
+         url('../fonts/montserrat-regular-webfont.svg#montserratregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Navigation
+================================================== */
+
+.container-fluid {
+	padding: 0px 20px 0px 20px;
+}
+
+#wrap {
+	margin-left: 250px;
+}
+
+.navbar {
+	margin-bottom: 0;
+}
+
+.brand-logo {
+	width: 250px;
+	height: 200px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: #333;
+}
+
+.primary-nav {
+	width: 250px;
+	height: 100%;
+	position: fixed;
+	top: 200px;
+	left: 0;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	background: #f9f9f9;
+}
+
+.primary-nav li {
+	float: left;
+}
+
+.primary-nav li.active {
+	background: #fff;
+}
+
+.primary-nav a {
+	width: 250px;
+	padding: 25px 30px 25px 30px;
+	float: left;
+	font-family: 'montserratregular', "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	font-weight: 500;
+	color: #ddd;
+	text-decoration: none;
+}
+
+.primary-nav a:hover, .primary-nav a:focus, .primary-nav li.active a {
+	color: #484848;
+	border: none;
+}
+
+.nav-label {
+	float: left;
+	padding: 10px;
+}
+
+.nav-icon {
+	width: 40px;
+	height: 40px;
+	float: left;
+	display: block;	
+}
+
+.primary-nav li:hover .nav-icon#nav-competitions, .primary-nav li.active .nav-icon#nav-competitions, .primary-nav li:hover .nav-icon#nav-projects, .primary-nav li.active .nav-icon#nav-projects  {
+	background-position: 0px -40px;
+}
+
+.nav-icon#nav-competitions {
+	background: transparent url(../images/nav-competitions.png) no-repeat 0px 0px;
+}
+
+.nav-icon#nav-projects {
+	background: transparent url(../images/nav-projects.png) no-repeat 0px 0px;
+}
+
+.navbar-default {
+
+}
+
+.navbar-default .navbar-toggle {
+	border: none;
+}
+
+.navbar-collapse {
+	width: 250px;
+	height: 100% !important;
+	max-height: none !important;
+	position: fixed;
+	top: 50px;
+	left: -250px;
+	border: none;
+	background: #f9f9f9;
+	-webkit-transition: all 0.2s cubic-bezier(.33,.8,.31,.81) 0s;
+	-ms-transition: all 0.2s cubic-bezier(.33,.8,.31,.81) 0s;
+	transition: all 0.2s cubic-bezier(.33,.8,.31,.81) 0s;
+}
+
+.nav-active #wrap {
+	margin-left: 250px;
+}
+
+/* Forms
+================================================== */
+
+label {
+	font-family: 'montserratregular', "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.form-group input[type="text"], .form-group input[type="number"], .form-group input[type="email"], .form-group input[type="url"], .form-group input[type="tel"], .form-group input[type="password"], .form-group input[type="checkbox"], .form-group textarea {
+	margin: 0px 0px 24px 0px;
+}
+
+.form-group input[type="checkbox"] {
+	margin-right: 10px;
+}
+
+.help-block {
+	font-size: 13px;
+	margin: 0;
+	white-space: normal;
+	position: relative;
+}
+
+.form-group .help-block {
+	opacity: 0;
+	-webkit-transition: all .25s ease-in-out 0;
+	-ms-transition: all .25s ease-in-out 0;
+	transition: all .25s ease-in-out 0;
+	display: block;
+	max-height: 0;
+	top: -1.1538461538461537em;
+	overflow: hidden;
+}
+
+.form-group input[type="text"]:focus ~ .help-block, .form-group input[type="password"]:focus ~ .help-block {
+	opacity: 1;
+	max-height: 200px;
+}
+
+.form-control:focus {
+	border-color: #a6d8cf;
+	outline: 0;
+}
+
+/* Alerts
+================================================== */
+
+.btn {
+  	font-family: 'montserratregular', "Helvetica Neue", Helvetica, Arial, sans-serif;
+	display: inline-block;
+	padding: 10px 12px;
+	margin-bottom: 0;
+	font-size: 15px;
+	-webkit-font-smoothing: antialiased;
+	border: 0;
+	border-radius: 3px;
+	color: #fff;
+	background: #484848;
+	transition: background .3s ease;
+}
+
+.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default {
+	color: #fff;
+	background-color: #333;
+}
+
+/* Alerts
+================================================== */
+
+.alert-danger {
+	color: #fff;
+	background-color: #ed7e7e;
+	border: none;
+	margin: 20px 0px 20px 0px;
+}
+
+.alert-danger a {
+	color: #fff;
+	border-bottom: 1px solid #fff;
+}
+
+.alert-danger a:hover {
+	color: #fff;
+	text-decoration: none;
+}
+
+.alert-danger .glyphicon {
+	font-size: 30px;
+}
+
+/* Charts
+================================================== */
+
+#chartdiv {
+
+}
+
+/* Login
+================================================== */
+
+#login {
+	background: #f9f9f9;
+}
+
+/* example */
+#login .logo {
+	width: 100%;
+	height: 200px;
+	margin: 30px 0px 30px 0px;
+	background: transparent url(../images/logo.png) no-repeat center center;
+}
+
+#login .btn {
+	padding: 15px 12px;
+	width: 100%;
+}
+
+/* Projects
+================================================== */
+
+.media-list li {
+	border-top: 1px dotted #c9c9c9;
+	padding: 20px 0px 10px 0px;
+}
+
+.media {
+
+}
+
+/* Media queries
+================================================== */
+
+@media (max-width: 991px) {
+	#wrap {
+		padding: 0;
+		margin: 0;
+		-webkit-transition: all 0.2s cubic-bezier(.33,.8,.31,.81) 0s;
+		-ms-transition: all 0.2s cubic-bezier(.33,.8,.31,.81) 0s;
+		transition: all 0.2s cubic-bezier(.33,.8,.31,.81) 0s;
+	}
+}
